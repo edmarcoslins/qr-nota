@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="branding/qr-nota-logo.jpg" alt="QR Nota" width="240">
+</p>
+
 # QR Nota
 
 App Android simples para guardar notas fiscais, principalmente as de despesas dedutíveis

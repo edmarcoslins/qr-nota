@@ -18,4 +18,6 @@
     <color name="status_ok_fg">#15803D</color>
     <color name="status_err_bg">#FDECEC</color>
     <color name="status_err_fg">#B91C1C</color>
+
+    <color name="launcher_bg">#FFFFFF</color>
 </resources>
