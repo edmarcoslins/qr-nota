@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Página "Sobre": objetivo do app e link da Receita Federal -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pageAbout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="4dp"
+        android:paddingBottom="24dp">
+
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="Para que serve o QR Nota?" />
+
+            <TextView
+                style="@style/Body"
+                android:text="O objetivo principal é guardar as notas fiscais de despesas dedutíveis na Declaração do Imposto de Renda, como gastos com saúde e educação. Assim, na hora de declarar, elas já estão reunidas num só lugar.\n\nMas o app serve também para guardar qualquer nota fiscal: basta ler o QR code impresso na nota." />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="Como usar" />
+
+            <TextView
+                style="@style/Body"
+                android:text="• Em “Enviar NF”, toque em Ler QR da nota e aponte a câmera para o QR code.\n• Marque “Imposto de Renda” nas notas de despesas dedutíveis, para encontrá-las fácil depois.\n• As notas ficam salvas no celular. Em “Gerir NF” você vê, apaga e compartilha todas como planilha (CSV) pelo WhatsApp, Drive, e-mail…\n• Opcional: envie cada nota também para uma planilha sua no Google (veja o “Tutorial google planilha”)." />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="Quais despesas são dedutíveis?" />
+
+            <TextView
+                style="@style/Body"
+                android:text="A Receita Federal explica quais pagamentos podem ser deduzidos e quais documentos guardar:" />
+
+            <Button
+                android:id="@+id/btnDeductibles"
+                style="@style/ButtonFilled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:minHeight="48dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="Ver despesas dedutíveis (gov.br)" />
+
+            <TextView
+                style="@style/Body"
+                android:layout_marginTop="10dp"
+                android:autoLink="web"
+                android:text="https://www.gov.br/receitafederal/pt-br/assuntos/meu-imposto-de-renda/preenchimento/manual-mir/pagamentos-ou-doacoes/despesas-dedutiveis"
+                android:textIsSelectable="true"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="Privacidade" />
+
+            <TextView
+                style="@style/Body"
+                android:text="As notas ficam somente no seu celular. Nada é enviado para o desenvolvedor: o app só envia dados para a sua própria planilha do Google, se você ativar essa opção." />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

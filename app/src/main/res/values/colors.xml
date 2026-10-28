@@ -1,0 +1,21 @@
+<resources>
+    <color name="primary">#0F766E</color>
+    <color name="primary_light">#14B8A6</color>
+    <color name="primary_dark">#0B5D57</color>
+    <color name="bg">#F3F6F7</color>
+    <color name="card">#FFFFFF</color>
+    <color name="input">#F7F9FA</color>
+    <color name="stroke">#DCE3E6</color>
+    <color name="text">#14232A</color>
+    <color name="text_muted">#5F7178</color>
+    <color name="on_primary">#FFFFFF</color>
+
+    <color name="status_info_bg">#FFFFFF</color>
+    <color name="status_info_fg">#14232A</color>
+    <color name="status_busy_bg">#E6F6F4</color>
+    <color name="status_busy_fg">#0F766E</color>
+    <color name="status_ok_bg">#E8F7EE</color>
+    <color name="status_ok_fg">#15803D</color>
+    <color name="status_err_bg">#FDECEC</color>
+    <color name="status_err_fg">#B91C1C</color>
+</resources>

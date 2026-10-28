@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Página "Tutorial google planilha": passo a passo e download dos scripts -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pageTutorial"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="4dp"
+        android:paddingBottom="24dp">
+
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="Para que serve?" />
+
+            <TextView
+                style="@style/Body"
+                android:text="Com o envio ativado, cada nota lida vai também para uma planilha sua no Google, além de ficar salva no celular.\n\nÉ opcional e feito uma única vez (uns 10 minutos). Fica mais fácil pelo computador: use os botões “Enviar” abaixo para mandar os arquivos para você mesmo (e-mail, WhatsApp…)." />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="1. Crie a planilha" />
+
+            <TextView
+                style="@style/Body"
+                android:autoLink="web"
+                android:text="Entre em https://sheets.google.com com sua conta Google e crie uma planilha em branco. Dê um nome, por exemplo “Notas QR”." />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="2. Abra o Apps Script" />
+
+            <TextView
+                style="@style/Body"
+                android:text="Na planilha, clique no menu Extensões → Apps Script. Vai abrir um editor de código numa nova aba." />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="3. Cole o código (Code.gs)" />
+
+            <TextView
+                style="@style/Body"
+                android:text="Apague tudo o que estiver no editor, cole o código abaixo e clique no ícone de disquete (Salvar). O código já vem com o seu token:" />
+
+            <TextView
+                android:id="@+id/txtTutorialToken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input"
+                android:fontFamily="monospace"
+                android:padding="12dp"
+                android:textColor="@color/text"
+                android:textIsSelectable="true"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCopyCode"
+                    style="@style/ButtonFilled"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:text="Copiar" />
+
+                <Button
+                    android:id="@+id/btnDownloadCode"
+                    style="@style/ButtonOutline"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:text="Baixar" />
+
+                <Button
+                    android:id="@+id/btnSendCode"
+                    style="@style/ButtonOutline"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:text="Enviar" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="4. Limite o acesso (appsscript.json)" />
+
+            <TextView
+                style="@style/Body"
+                android:text="Isso faz o script acessar somente esta planilha.\n\n• No editor, clique em ⚙️ Configurações do projeto (menu da esquerda) e marque “Mostrar arquivo de manifesto appsscript.json no editor”.\n• Volte ao Editor (ícone &lt; &gt;), abra o arquivo appsscript.json, apague o conteúdo, cole o arquivo abaixo e salve." />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnCopyManifest"
+                    style="@style/ButtonFilled"
+                    android:layout_width="0dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:text="Copiar" />
+
+                <Button
+                    android:id="@+id/btnDownloadManifest"
+                    style="@style/ButtonOutline"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:text="Baixar" />
+
+                <Button
+                    android:id="@+id/btnSendManifest"
+                    style="@style/ButtonOutline"
+                    android:layout_width="0dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    android:text="Enviar" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="5. Publique como App da Web" />
+
+            <TextView
+                style="@style/Body"
+                android:text="• Clique em Implantar → Nova implantação.\n• Em “Selecionar tipo” (engrenagem), escolha App da Web.\n• Executar como: Eu.\n• Quem pode acessar: Qualquer pessoa.\n• Clique em Implantar e autorize com sua conta Google.\n\nSe aparecer “O Google não verificou este app”, clique em Avançado → Acessar (não seguro). Pode ficar tranquilo: o app é o seu próprio script, e ele só acessa esta planilha." />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="6. Copie a URL" />
+
+            <TextView
+                style="@style/Body"
+                android:text="Ao final, o Google mostra a URL do app da Web (termina em /exec). Copie e mande para o celular.\n\nPara testar, abra a URL no navegador: deve aparecer {&quot;ok&quot;:true,…}." />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="7. Ative no app" />
+
+            <TextView
+                style="@style/Body"
+                android:text="Em “Enviar NF”, na seção Envio para Google Planilha, marque “Ativar envio para Google Planilha”, cole a URL e toque em Salvar configuração. Pronto!" />
+
+            <Button
+                android:id="@+id/btnTutorialGoSend"
+                style="@style/ButtonFilled"
+                android:layout_width="match_parent"
+                android:layout_marginTop="12dp"
+                android:text="Ir para Enviar NF" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/Card">
+
+            <TextView
+                style="@style/SectionTitle"
+                android:text="Dúvidas comuns" />
+
+            <TextView
+                style="@style/Body"
+                android:text="• “token inválido”: o token do app é diferente do que está no script (por exemplo, se você mudou o token no app). Copie o código de novo (passo 3), cole no editor e publique uma nova versão.\n\n• Para publicar uma nova versão sem mudar a URL: Implantar → Gerenciar implantações → ✏️ (editar) → Versão: Nova versão → Implantar.\n\n• Para zerar a planilha, apague as linhas da aba “Notas”, mantendo o cabeçalho." />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

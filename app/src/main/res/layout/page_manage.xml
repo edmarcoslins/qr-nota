@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Página "Gerir NF": lista, seleção, exclusão e compartilhamento do CSV -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pageManage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <LinearLayout style="@style/Card">
+
+        <TextView
+            android:id="@+id/txtManageCount"
+            style="@style/SectionTitle" />
+
+        <TextView
+            style="@style/Body"
+            android:text="Marque as notas para apagar. Toque numa nota para ver os detalhes." />
+
+        <CheckBox
+            android:id="@+id/chkSelectAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:buttonTint="@color/primary"
+            android:paddingStart="6dp"
+            android:text="Selecionar todas"
+            android:textColor="@color/text"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDeleteSelected"
+                style="@style/ButtonOutline.Danger"
+                android:layout_width="0dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:text="Apagar" />
+
+            <Button
+                android:id="@+id/btnShareCsv"
+                style="@style/ButtonFilled"
+                android:layout_width="0dp"
+                android:layout_marginStart="6dp"
+                android:layout_weight="1"
+                android:text="Compartilhar CSV" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtManageEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="32dp"
+        android:text="Nenhuma nota salva ainda.\nLeia um QR code em “Enviar NF”."
+        android:textColor="@color/text_muted"
+        android:textSize="15sp" />
+
+    <ListView
+        android:id="@+id/listNotes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:paddingTop="6dp"
+        android:paddingBottom="16dp" />
+</LinearLayout>

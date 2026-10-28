@@ -1,0 +1,12 @@
+.gradle/
+build/
+local.properties
+*.iml
+.idea/
+QR-Nota.apk
+edmarcos-lins.jks
+keystore.properties
+*.jks
+*.keystore
+*.apk
+.DS_Store
